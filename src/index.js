@@ -33,24 +33,4 @@ app.listen(port, () => {
   console.log(
     `\nServer is running on port ${port}.\nfull path is ${running_URI}\n`
   );
-  /*console.log(
-    'App routes list (You need to call)',
-    `\n${running_URI}/`,
-    `\n${running_URI}/oauth/local`,
-    `\n${running_URI}/oauth/google`,
-    `\n${running_URI}/oauth/facebook`,
-    `\n${running_URI}/oauth/instagram`,
-    `\n${running_URI}/oauth/linkedin`,
-    `\n${running_URI}/oauth/github`,
-    `\n${running_URI}/oauth/spotify`,
-    '\n\nApp routes list (do not call, app will handle internally)',
-    `\n${running_URI}/oauth/local/authorised_callback`,
-    `\n${running_URI}/oauth/google/authorised_callback`,
-    `\n${running_URI}/oauth/facebook/authorised_callback`,
-    `\n${running_URI}/oauth/linkedin/authorised_callback`,
-    `\n${running_URI}/oauth/github/authorised_callback`,
-    `\n${running_URI}/oauth/spotify/authorised_callback`,
-    `\n${running_URI}/api/logout`,
-    `\n${running_URI}/api/current_user`
-  );*/
 });

@@ -38,7 +38,6 @@ class ErrorPage extends Component {
 
 // Mapping Global State object with current Component props
 const mapStateToProps = (globalState, ownProps) => {
-  console.log('Error page', globalState.oauth)
   return {
     oAuth: globalState.oauth,
   }

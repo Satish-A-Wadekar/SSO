@@ -138,8 +138,6 @@ passport.use(
     },
     //callback handler
     async (accessToken, refreshToken, profile, done) => {
-      //console.log('spotify details: ', accessToken, refreshToken, profile);
-
       //done() callback tells passport pkg that we have finished the process after we received what we wanted from oAuth and now you may continue further with oAuth
       // if we don't call done() callback then our browser will stop in loading state
       const existingUser = await User.findOne({
@@ -169,8 +167,6 @@ passport.use(
       passwordField: "password",
     },
     async (req, username, password, done) => {
-      //console.log("in LocalStrategy > params: ", username, password);
-
       //  find single user by its unique "username"
       const existingUser = await User.findOne(
         {
@@ -188,7 +184,6 @@ passport.use(
             if (err || !isMatch) {
               return done(new Error("Incorrect username or password"), null);
             }
-            //console.log("existingUser > credentials match: ", isMatch);
             return done(null, existingUser);
           }
         );
@@ -223,7 +218,6 @@ passport.use(
     },
     //callback handler
     async (accessToken, refreshToken, profile, done) => {
-      //console.log("instagram details", profile);
       //done() callback tells passport pkg that we have finished the process after we received what we wanted from oAuth and now you may continue further with oAuth
       // if we don't call done() callback then our browser will stop in loading state
       const existingUser = await User.findOne({ profileId: profile.id }); // profile.id is a property we received from Google, but in other oAuth process like facebook, linkedin etc it may varies
@@ -253,8 +247,6 @@ passport.use(
     },
     //callback handler
     async (accessToken, refreshToken, profile, done) => {
-      //console.log("linkedIn details: ", accessToken, refreshToken, profile);
-
       //done() callback tells passport pkg that we have finished the process after we received what we wanted from oAuth and now you may continue further with oAuth
       // if we don't call done() callback then our browser will stop in loading state
       const existingUser = await User.findOne({

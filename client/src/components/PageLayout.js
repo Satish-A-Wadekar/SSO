@@ -71,7 +71,6 @@ class PageLayout extends Component {
           console.log(err.message)
         } else {
           let { actions, navigate } = this.props
-          console.log(user)
           actions.fn_getLoggedInUserDetails()
           //  navigate('/home')
         }
@@ -83,7 +82,6 @@ class PageLayout extends Component {
     const { oAuth } = this.props
     const { data } = oAuth
     const isAuth = _.has(data, '_id')
-    //  console.log('PageLayout > render() > oAuth', oAuth)
     return (
       <>
         <Navbar className='bg-body-tertiary mb-3' expand='lg' bg='dark' data-bs-theme='dark'>

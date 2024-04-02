@@ -17,7 +17,6 @@ module.exports = {
           "sha256", //digest,
           (err, user_input_password_hashed) => {
             if (err) {
-              //console.log('fn_verifyPassword > promise > reject', err);
               reject(err);
             }
             if (

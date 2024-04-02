@@ -100,11 +100,9 @@ module.exports = (app) => {
   app.get("/api/logout", fn_logout);
   app.get("/api/current_user", [fn_ensureAuthenticated], fn_get_current_user);
   app.get("/api/error", (req, res) => {
-    console.log(req.session.messages);
     res.status(400).send({ message: "Server error !..." });
   });
   app.get("/api/success", (req, res) => {
-    console.log(req.session.messages);
     res.status(400).send({ message: "success" });
   });
 
