@@ -1,0 +1,10 @@
+.modal-header .btn-close {
+  display: none;
+}
+.modal-90w {
+  max-width: none !important;
+  width: 90%;
+}
+.border-radiusImportant {
+  border-radius: 5px !important;
+}
